@@ -1,0 +1,42 @@
+h1{
+    font-weight: 400;
+}
+.item{
+    list-style: none;
+    display: flex;
+    font-weight: 300;
+}
+
+.edit-item-button{
+    background-color: transparent;
+    border: none;
+    color: dodgerblue;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+.edit-item-button:hover{
+    cursor: pointer;
+}
+
+
+.delete-button{
+    width: 1.5em;
+    height: 1.5em;
+    font-size: .8em;
+    padding: 0;
+    background-color: #ffc800;
+    color: rgb(29, 29, 29);
+    border: 1px rgb(29, 29, 29) solid;
+    border-radius: 3px;
+
+}
+.delete-button:hover{
+    background-color: #ffa096;
+    border: 1px salmon solid;
+}
+
+input[type="checkbox"] { 
+    filter: invert(5%) hue-rotate(910deg) brightness(2);
+    border: 1px solid black;
+  }
