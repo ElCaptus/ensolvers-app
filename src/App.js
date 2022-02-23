@@ -1,29 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, createContext, useContext} from 'react'
 import './App.css';
 import { TaskElement } from './components/TaskElement';
 import { CreateTask } from './components/CreateTask'
 
 function App() {
+
   const [taskItems, setTaskItems] = useState([])
-  
 
   const deleteTask = taskId =>{ 
     const tasksUpdated = taskItems.filter( t => t.id !== taskId)
     setTaskItems([...tasksUpdated])
   }
 
-  const editTasks = (id, editingText) =>{
-    const updateTasks = [...taskItems].map( task => {
-      if(task.id === id)
-        task.name = editingText
-      return task
-    })
-}
-
   const mapping = () =>{
     
     return taskItems.map( task => 
-      <TaskElement task={task} key={task.name} editcb={editTasks} delcb={deleteTask} />
+      <TaskElement task={task} key={task.name} delcb={deleteTask} />
       )
   }
 
