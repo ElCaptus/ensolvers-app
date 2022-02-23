@@ -1,0 +1,6 @@
+@media (max-width: 600px){
+    .create-task {
+      display: flex;
+      justify-content: center;
+    }
+  }

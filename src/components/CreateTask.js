@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './CreateTask.css'
 
 export const CreateTask = props =>{
     const [ newTask, setNewTask ] = useState('')
@@ -10,7 +11,7 @@ export const CreateTask = props =>{
       }
 
     return(
-        <div>
+        <div className="create-task">
             <input type="text" value={newTask} onChange={updateValue} />
             <input type="button" value="Add" onClick={addNewTask}/>
         </div>

@@ -16,13 +16,12 @@ export const TaskElement = props =>{
     return( <li className='item'>
         <input id={props.task.id} className='item-checkbox' type='checkbox' value={props.task.done}/>
         {props.task.id !== taskEditing ? 
-        (<div>
+        (<div className='centered'>
             <label htmlFor={props.task.id}>{props.task.name}</label>
             <input className='edit-item-button' type='button' value='Edit' onClick={()=>{setTaskEditing(props.task.id)}} /> 
         </div>)
             : 
-        (
-        <div>
+        (<div className='centered'>
             <input type="text" onChange={(e)=>{setEditingText(e.target.value)}} value={editingText}/>
             <input type="button" value="Save" onClick={() => {props.task.name = editingText;cb();}}/>
         </div>

@@ -5,6 +5,7 @@ h1{
     list-style: none;
     display: flex;
     font-weight: 300;
+    align-items: center;
 }
 
 .edit-item-button{
@@ -21,9 +22,8 @@ h1{
 
 
 .delete-button{
-    width: 1.5em;
-    height: 1.5em;
-    font-size: .8em;
+    width: 1.3em;
+    height: 1.3em;
     padding: 0;
     background-color: #ffc800;
     color: rgb(29, 29, 29);
@@ -37,6 +37,26 @@ h1{
 }
 
 input[type="checkbox"] { 
+    width: 2em;
+    height: 2em;
     filter: invert(5%) hue-rotate(910deg) brightness(2);
     border: 1px solid black;
   }
+
+.centered{
+    display: flex;
+}
+
+label{
+    max-width: 500px;
+    overflow: auto;
+}
+
+@media (max-width: 450px){
+    .item{
+        justify-content: center;
+    }
+    label{
+        max-width: 200;
+    }
+}
